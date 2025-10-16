@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>KwikPay</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Lock / Password screen -->
+    <div id="login-screen" class="panel">
+      <h1 class="brand">KwikPay</h1>
+      <p class="subtitle">Zesty Green • Fast. Secure. Simple.</p>
+      <input id="app-password" type="password" placeholder="Enter app password" />
+      <button id="btn-login">Unlock KwikPay</button>
+      <p id="login-msg" class="msg"></p>
+    </div>
+
+    <!-- Main dashboard (hidden until login) -->
+    <div id="dashboard" class="panel hidden">
+      <header>
+        <h2>KwikPay</h2>
+        <div id="balance">Balance: ₹ <span id="bal-val">0</span></div>
+      </header>
+
+      <section class="actions">
+        <button data-action="send">Send Money</button>
+        <button data-action="recharge">Mobile Recharge</button>
+        <button data-action="electricity">Electricity Bill</button>
+        <button data-action="history">Transaction History</button>
+      </section>
+
+      <section id="flow-area" class="flow"></section>
+
+      <footer>© 2025 KwikPay</footer>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
